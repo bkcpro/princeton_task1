@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title> Efficient Implementation </title>
+    <link href='styles/styles.css' rel='stylesheet' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+
+  <body>
+
+    <div class='compute'>
+      <div class='level1 data_enter'>
+        <div class='level2'>
+          <div class='level3'>
+            <p>
+              Enter data:
+            </p>
+          </div>
+
+          <div class='level3'>
+            <input type='text' placeholder='e.g. [1, 5, 7, 9], 6' id='test_input'/>
+            <input type='button' value='Test' class='test_button'/>
+          </div>
+        </div>
+      </div>
+
+      <div class='level1 OR'>
+        <div class='level2'>
+          <span> (OR) </span>
+        </div>
+      </div>
+
+      <div class='level1 data_upload'>
+        <div class='level2'>
+          <div class='level3'>
+            <p>
+              Upload a file of input values:
+            </p>
+          </div>
+          <div class='level3'>
+            <label class='uploadTextFile'>
+              <input type='file' id='uploadTextFile'>
+              Upload File
+            </label>
+            <input type='button' value='Test' class='test_button'/>
+          </div>
+          <div class='level3'>
+            <span id='displayTextFile'></span>
+          </div>
+        </div>
+      </div>
+
+      <div class='level1 result'>
+        <div class=level2>
+          <P>
+            Result:
+          </P>
+        </div>
+        <div class='level2'>
+          <p id='showResult'></p>
+        </div>
+      </div>
+    </div>
+
+    <div class='problem_explanation'>
+      <div class='level1'>
+        <div class='question1 level2'>
+          <div class='q-desc level3'>
+            <p>
+              <h4><b>Question 1:</b></h4>
+            </p>
+            <p>
+              Write a function “sumtest(array of ints, int)” that tests whether any combination of two elements in the array sums up to a testsum and returns a boolean if this is so. Assume that the array of integers is sorted. For example,
+              sumtest([1,5,7,9], 6) should return true because 1 + 5 = 6
+              sumtest([1,5,7,9], 7) should return false
+            </p>
+          </div>
+
+          <div class='q-btn level3'>
+            <input type='button' value='show answer' class='clickButton' />
+          </div>
+
+          <div class='a-desc level3'>
+            <div class='level4'>
+              <p>
+                Sumtest function:
+                <script src="https://gist.github.com/bkcpro/5be1c3e11df673439cd8c68886f74d3d.js"></script>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class='level1'>
+        <div class='question2 level2'>
+          <div class='q-desc level3'>
+            <p>
+              <h4><b>Question 2:</b></h4>
+            </p>
+            <p>
+              What is the fastest implementation that you can construct?
+            </p>
+          </div>
+
+          <div class='q-btn level3'>
+            <input type='button' value='show answer' class='clickButton' />
+          </div>
+
+          <div class='a-desc level3'>
+            <div class='level4'>
+              <p>
+                The fastest implementation would be O(n). The array is iterated through each element and searched for a particular number in the sorted array, which is the difference between the individual array element being iterated and the passed number (second parameter) to the function, through "Binary Search" in the sorted array in O(log n) time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="level1">
+        <div class="question3 level2">
+          <div class='q-desc level3'>
+            <p>
+              <h4><b>Question 3:</b></h4>
+            </p>
+            <p>
+              What is its runtime as function of the length of the array N?
+            </p>
+          </div>
+
+          <div class='q-btn level3'>
+            <input type='button' value='show answer' class='clickButton'/>
+          </div>
+
+          <div class="a-desc level3">
+            <div class='level4'>
+              <p>
+                O(n)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="level1">
+        <div class="question4 level2">
+          <div class='q-desc level3'>
+            <p>
+              <h4><b>Question 4:</b></h4>
+            </p>
+            <p>
+              How does the runtime change if the array needs to be sorted first?
+            </p>
+          </div>
+
+          <div class='q-btn level3'>
+            <input type='button' value='show answer' class='clickButton' />
+          </div>
+
+          <div class="a-desc level3">
+            <div class='level4'>
+              <p>
+                If the array needs to be sorted first, a quick sort could be used, but inefficiently as the worst-case time complexity is O(n^2). Alternatively, a Balanced Binary-Search-Tree could be constructed out of the unsorted array and the search could be made. The complexity would be O(n) [for construction - recursively done] + (log n) [for search] ~= O(n)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    <!-- Behavior -->
+
+    <script data-main='scripts/main.js' src='scripts/require.js'></script>
+
+  </body>
+</html>
