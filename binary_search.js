@@ -1,6 +1,6 @@
 function sumtest(arr, num){
   for(let i=0; i<arr.length; i++){
-    if(arr[i] * 2 === num) continue;
+    // if(arr[i] * 2 === num) continue;
     if(search(num-arr[i], arr) === true) return true;
   }
   return false;
