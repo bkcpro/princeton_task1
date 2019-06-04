@@ -19,5 +19,5 @@ function search(num, arr){
   else return false;
 }
 
-// let arr = [1, 3, 5, 7, 9], num = 14;
-// console.log(sumtest(arr, num));
+let arr = [1, 2, 3, 4], num = 7;
+console.log(sumtest(arr, num));

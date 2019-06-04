@@ -26,8 +26,10 @@ requirejs(['jquery', 'bst', 'jquery_placeholder'], function($, bst, jp){
 
     for(let i=0; i<arr.length; i++){
       // if(arr[i] * 2 === num) continue;
-
-      let node = bstree.search(bstree.root, num-arr[i]);
+      let temp = arr[i];
+      bstree.search(bstree.root, arr[i]).data = 0;
+      
+      let node = bstree.search(bstree.root, num-temp);
       if(node !== null){
         return 'True';
       }
