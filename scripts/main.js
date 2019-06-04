@@ -25,7 +25,7 @@ requirejs(['jquery', 'bst', 'jquery_placeholder'], function($, bst, jp){
     recursiveAddition(arr);
 
     for(let i=0; i<arr.length; i++){
-      if(arr[i] * 2 === num) continue;
+      // if(arr[i] * 2 === num) continue;
 
       let node = bstree.search(bstree.root, num-arr[i]);
       if(node !== null){
